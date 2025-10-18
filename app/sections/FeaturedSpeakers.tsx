@@ -145,7 +145,7 @@ export default function FeaturedSpeakers() {
                   {/* Base Image */}
                   <div className="absolute inset-0">
                     <Image
-                      src="/Speakers/Screenshot 2025-10-18 at 23.34.24.png"
+                      src="/Speakers/speaker-placeholder.png"
                       alt={activeSpeaker.name}
                       fill
                       className="object-cover grayscale"
