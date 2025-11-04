@@ -256,7 +256,7 @@ function WaveShader({ controls }: { controls: ShaderControls }) {
       
       float gray = dot(color, vec3(0.299, 0.587, 0.114));
       gray = floor(gray * uPosterizationLevels) / uPosterizationLevels;
-      vec2 ditherCoord = gl_FragCoord.xy;
+      vec2 ditherCoord = gl_FragCoord.xy / 4.0;
       float dithered = dither8x8(ditherCoord, gray);
       vec3 ditheredColor = mix(vec3(0.0), color, dithered * uDitherIntensity);
       
@@ -296,7 +296,8 @@ function WaveShader({ controls }: { controls: ShaderControls }) {
         
         float lineGray = dot(lineColor, vec3(0.299, 0.587, 0.114)) * lineStrength * uColorWaveIntensity;
         lineGray = floor(lineGray * uPosterizationLevels) / uPosterizationLevels;
-        float lineDithered = dither8x8(ditherCoord, lineGray);
+        vec2 lineDitherCoord = gl_FragCoord.xy / 4.0;
+        float lineDithered = dither8x8(lineDitherCoord, lineGray);
         vec3 ditheredLineColor = lineColor * lineDithered * uDitherIntensity * lineStrength * uColorWaveIntensity;
         
         colorLines += ditheredLineColor;
