@@ -68,7 +68,7 @@ Data lives in `app/data/` as typed constants, imported into components/sections.
 
 **Typing Animation:** Used in Overview and PartnershipTiers sections. Components reveal text character-by-character when scrolled into view, then loop with delete animation. Uses IntersectionObserver for scroll detection.
 
-**Shader Backgrounds:** Hero section uses React Three Fiber with Three.js for shader-based animated backgrounds. ShaderWaveBackground component provides interactive wave tunnel effect with configurable controls.
+**Shader Backgrounds:** Hero section uses React Three Fiber with Three.js for shader-based animated backgrounds. FluidWaveBackground component provides a simple, performant fluid wave effect using multiple overlapping sine waves, noise variation, and distortion for natural movement. Shader approach prioritizes simplicity and performance over complex controls.
 
 **FAQ Accordion:** Client-side state manages open/close. First item open by default.
 
@@ -89,7 +89,7 @@ Conference data split by domain:
 
 **Active Sections:**
 
-- Hero (with React Three Fiber shader wave background, newsletter form)
+- Hero (with React Three Fiber fluid wave shader background, newsletter form)
 - Overview (typing heading, focus areas, attendees)
 - PartnershipTiers (typing heading, tier cards, stats, CTA)
 - FAQ (typing heading, accordion)

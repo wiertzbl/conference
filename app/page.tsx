@@ -3,7 +3,7 @@ import { Hero, FeaturedSpeakers, Overview, FAQ } from '@/sections';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white w-full" style={{ width: '100vw' }}>
       <Navigation />
       <Hero />
       <FeaturedSpeakers />
