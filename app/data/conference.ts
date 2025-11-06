@@ -1,7 +1,7 @@
 import type { ConferenceInfo, TicketPricing } from "@/types";
 
 export const CONFERENCE_INFO = {
-  title: "aico.nf",
+  title: "Applied AI Conf by Tech Europe",
   tagline: "Applied AI",
   location: "Delta Campus · Berlin · May 28, 2026",
   date: "2026-05-28",
